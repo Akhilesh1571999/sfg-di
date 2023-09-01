@@ -3,16 +3,16 @@ package spring.framework.sfgdi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import spring.framework.sfgdi.controllers.ConstructorInjectedController;
-import spring.framework.sfgdi.controllers.MyController;
-import spring.framework.sfgdi.controllers.PropertyInjectedController;
-import spring.framework.sfgdi.controllers.SetterInjectedController;
+import spring.framework.sfgdi.controllers.*;
 
 @SpringBootApplication
 public class SfgDiApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
+
+		I18nController i18nController =(I18nController) ctx.getBean("i18nController") ;
+		System.out.println(i18nController.sayHello());
 
 		MyController myController = (MyController) ctx.getBean("myController");
 
