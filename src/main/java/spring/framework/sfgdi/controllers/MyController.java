@@ -6,8 +6,8 @@ import org.springframework.stereotype.Controller;
 public class MyController {
 
     public String sayHello(){
-        System.out.println("Hello!!!");
+        System.out.println("Hello world!!!");
 
-        return "HI all";
+        return "HI all!!!";
     }
 }
